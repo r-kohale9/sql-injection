@@ -2630,6 +2630,7 @@ input[type="search"] {
 }
 .form-group {
   margin-bottom: 15px;
+  justify-content: space-between;
 }
 .radio,
 .checkbox {
@@ -3342,8 +3343,8 @@ fieldset[disabled] .btn-warning.focus {
   background-color: #fff;
 }
 .btn-danger {
-  color: #fff;
-  background-color: #d9534f;
+  color: #d43f3a;
+  /* background-color: #d9534f; */
   border-color: #d43f3a;
 }
 .btn-danger:focus,

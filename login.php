@@ -79,29 +79,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     <link rel="stylesheet" href="assets/bootstrap.css">
     <style type="text/css">
         body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
+        .wrapper{ width: 350px; padding: 20px; margin:auto; border: 1px solid #ccc; margin-top: 50px; border-radius: 8px }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <h2>Login</h2>
-        <p>Please fill in your credentials to login.</p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                <label>Username</label>
-                <input type="text" name="username" autocomplete="off" class="form-control" value="<?php echo $username; ?>">
-                <span class="help-block"><?php echo $username_err; ?></span>
-            </div>    
-            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                <label>Password</label>
-                <input type="password" name="password" autocomplete="off" class="form-control">
-                <span class="help-block"><?php echo $password_err; ?></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Login">
-            </div>
-            <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
-        </form>
-    </div>    
+    <div style="height:100vh;background-color: #f9f9f9" >
+        <div style="height:64px;padding: 10px 40px; border-bottom: 1px solid grey">
+        <h4>Logo</h4>
+        </div>
+        <div class="wrapper">
+            <h2>Login</h2>
+            <hr></hr>
+            <p>Please fill in your credentials to login.</p>
+                <br />
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                    <label>Username</label>
+                    <input type="text" name="username" autocomplete="off" class="form-control" value="<?php echo $username; ?>">
+                    <span class="help-block"><?php echo $username_err; ?></span>
+                </div>
+                <br />
+                <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                    <label>Password</label>
+                    <input type="password" name="password" autocomplete="off" class="form-control">
+                    <span class="help-block"><?php echo $password_err; ?></span>
+                </div>
+                <br />
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Login">
+                </div>
+                <p>Don't have an account? <a href="register.php">Create Account</a>.</p>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
